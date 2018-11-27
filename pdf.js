@@ -306,7 +306,6 @@ document.webL10n = (function(window, document, undefined) {
       // we might have a pre-compiled dictionary instead
       var dict = getL10nDictionary();
       if (dict && dict.locales && dict.default_locale) {
-        console.log('using the embedded JSON directory, early way out');
         gL10nData = dict.locales[lang];
         if (!gL10nData) {
           var defaultLocale = dict.default_locale.toLowerCase();
@@ -321,8 +320,6 @@ document.webL10n = (function(window, document, undefined) {
           }
         }
         callback();
-      } else {
-        console.log('no resource to load, early way out');
       }
       // early way out
       fireL10nReadyEvent(lang);
@@ -890,7 +887,6 @@ document.webL10n = (function(window, document, undefined) {
       if (arg in gL10nData) {
         return gL10nData[arg];
       }
-      console.log('argument {{' + arg + '}} for #' + key + ' is undefined.');
       return matched_text;
     });
   }
@@ -11062,7 +11058,6 @@ var FontInspector = (function FontInspectorClosure() {
       logIt.textContent = 'Log';
       logIt.addEventListener('click', function(event) {
         event.preventDefault();
-        console.log(fontObj);
       });
       var select = document.createElement('input');
       select.setAttribute('type', 'checkbox');
@@ -12469,21 +12464,6 @@ var PDFLinkService = function PDFLinkServiceClosure() {
      });
     }
    };
-   var destinationPromise;
-   if (typeof dest === 'string') {
-    destString = dest;
-    destinationPromise = this.pdfDocument.getDestination(dest);
-   } else {
-    destinationPromise = Promise.resolve(dest);
-   }
-   destinationPromise.then(function (destination) {
-    dest = destination;
-    if (!(destination instanceof Array)) {
-     console.error('PDFLinkService_navigateTo: "' + destination + '" is not a valid destination array.');
-     return;
-    }
-    goToDestination(destination[0]);
-   });
   },
   getDestinationHash: function PDFLinkService_getDestinationHash(dest) {
    if (typeof dest === 'string') {
@@ -13470,7 +13450,6 @@ var PDFViewerApplication = {
    var info = data.info, metadata = data.metadata;
    self.documentInfo = info;
    self.metadata = metadata;
-   console.log('PDF ' + pdfDocument.fingerprint + ' [' + info.PDFFormatVersion + ' ' + (info.Producer || '-').trim() + ' / ' + (info.Creator || '-').trim() + ']' + ' (PDF.js: ' + (pdfjsLib.version || '-') + (!pdfjsLib.PDFJS.disableWebGL ? ' [WebGL]' : '') + ')');
    var pdfTitle;
    if (metadata && metadata.has('dc:title')) {
     var title = metadata.get('dc:title');
