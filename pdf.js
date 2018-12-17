@@ -1066,9 +1066,9 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	function __w_pdfjs_require__(moduleId) {
 /******/
 /******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
+/******/ 		if(installedModules[moduleId])
 /******/ 			return installedModules[moduleId].exports;
-/******/ 		}
+/******/
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = installedModules[moduleId] = {
 /******/ 			i: moduleId,
@@ -1123,7 +1123,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__w_pdfjs_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __w_pdfjs_require__(__w_pdfjs_require__.s = 13);
+/******/ 	return __w_pdfjs_require__(__w_pdfjs_require__.s = 14);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -1132,7 +1132,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(global) {
-var compatibility = __w_pdfjs_require__(14);
+var compatibility = __w_pdfjs_require__(13);
 var globalScope = typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : this;
 var FONT_IDENTITY_MATRIX = [
  0.001,
@@ -4770,8 +4770,8 @@ var _UnsupportedManager = function UnsupportedManagerClosure() {
   }
  };
 }();
-exports.version = '1.7.367';
-exports.build = '706eec84';
+exports.version = '1.7.354';
+exports.build = '0f7548ba';
 exports.getDocument = getDocument;
 exports.PDFDataRangeTransport = PDFDataRangeTransport;
 exports.PDFWorker = PDFWorker;
@@ -6803,8 +6803,8 @@ if (!globalScope.PDFJS) {
  globalScope.PDFJS = {};
 }
 var PDFJS = globalScope.PDFJS;
-PDFJS.version = '1.7.367';
-PDFJS.build = '706eec84';
+PDFJS.version = '1.7.354';
+PDFJS.build = '0f7548ba';
 PDFJS.pdfBug = false;
 if (PDFJS.verbosity !== undefined) {
  sharedUtil.setVerbosityLevel(PDFJS.verbosity);
@@ -9470,47 +9470,6 @@ exports.TilingPattern = TilingPattern;
 /***/ (function(module, exports, __w_pdfjs_require__) {
 
 "use strict";
-
-var pdfjsVersion = '1.7.367';
-var pdfjsBuild = '706eec84';
-var pdfjsSharedUtil = __w_pdfjs_require__(0);
-var pdfjsDisplayGlobal = __w_pdfjs_require__(9);
-var pdfjsDisplayAPI = __w_pdfjs_require__(3);
-var pdfjsDisplayTextLayer = __w_pdfjs_require__(5);
-var pdfjsDisplayAnnotationLayer = __w_pdfjs_require__(2);
-var pdfjsDisplayDOMUtils = __w_pdfjs_require__(1);
-var pdfjsDisplaySVG = __w_pdfjs_require__(4);
-exports.PDFJS = pdfjsDisplayGlobal.PDFJS;
-exports.build = pdfjsDisplayAPI.build;
-exports.version = pdfjsDisplayAPI.version;
-exports.getDocument = pdfjsDisplayAPI.getDocument;
-exports.PDFDataRangeTransport = pdfjsDisplayAPI.PDFDataRangeTransport;
-exports.PDFWorker = pdfjsDisplayAPI.PDFWorker;
-exports.renderTextLayer = pdfjsDisplayTextLayer.renderTextLayer;
-exports.AnnotationLayer = pdfjsDisplayAnnotationLayer.AnnotationLayer;
-exports.CustomStyle = pdfjsDisplayDOMUtils.CustomStyle;
-exports.createPromiseCapability = pdfjsSharedUtil.createPromiseCapability;
-exports.PasswordResponses = pdfjsSharedUtil.PasswordResponses;
-exports.InvalidPDFException = pdfjsSharedUtil.InvalidPDFException;
-exports.MissingPDFException = pdfjsSharedUtil.MissingPDFException;
-exports.SVGGraphics = pdfjsDisplaySVG.SVGGraphics;
-exports.UnexpectedResponseException = pdfjsSharedUtil.UnexpectedResponseException;
-exports.OPS = pdfjsSharedUtil.OPS;
-exports.UNSUPPORTED_FEATURES = pdfjsSharedUtil.UNSUPPORTED_FEATURES;
-exports.isValidUrl = pdfjsDisplayDOMUtils.isValidUrl;
-exports.createValidAbsoluteUrl = pdfjsSharedUtil.createValidAbsoluteUrl;
-exports.createObjectURL = pdfjsSharedUtil.createObjectURL;
-exports.removeNullCharacters = pdfjsSharedUtil.removeNullCharacters;
-exports.shadow = pdfjsSharedUtil.shadow;
-exports.createBlob = pdfjsSharedUtil.createBlob;
-exports.getFilenameFromUrl = pdfjsDisplayDOMUtils.getFilenameFromUrl;
-exports.addLinkAttributes = pdfjsDisplayDOMUtils.addLinkAttributes;
-
-/***/ }),
-/* 14 */
-/***/ (function(module, exports, __w_pdfjs_require__) {
-
-"use strict";
 /* WEBPACK VAR INJECTION */(function(global) {
 if (typeof PDFJS === 'undefined' || !PDFJS.compatibilityChecked) {
  var globalScope = typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : this;
@@ -10925,6 +10884,47 @@ if (typeof PDFJS === 'undefined' || !PDFJS.compatibilityChecked) {
 }
 /* WEBPACK VAR INJECTION */}.call(exports, __w_pdfjs_require__(6)))
 
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __w_pdfjs_require__) {
+
+"use strict";
+
+var pdfjsVersion = '1.7.354';
+var pdfjsBuild = '0f7548ba';
+var pdfjsSharedUtil = __w_pdfjs_require__(0);
+var pdfjsDisplayGlobal = __w_pdfjs_require__(9);
+var pdfjsDisplayAPI = __w_pdfjs_require__(3);
+var pdfjsDisplayTextLayer = __w_pdfjs_require__(5);
+var pdfjsDisplayAnnotationLayer = __w_pdfjs_require__(2);
+var pdfjsDisplayDOMUtils = __w_pdfjs_require__(1);
+var pdfjsDisplaySVG = __w_pdfjs_require__(4);
+exports.PDFJS = pdfjsDisplayGlobal.PDFJS;
+exports.build = pdfjsDisplayAPI.build;
+exports.version = pdfjsDisplayAPI.version;
+exports.getDocument = pdfjsDisplayAPI.getDocument;
+exports.PDFDataRangeTransport = pdfjsDisplayAPI.PDFDataRangeTransport;
+exports.PDFWorker = pdfjsDisplayAPI.PDFWorker;
+exports.renderTextLayer = pdfjsDisplayTextLayer.renderTextLayer;
+exports.AnnotationLayer = pdfjsDisplayAnnotationLayer.AnnotationLayer;
+exports.CustomStyle = pdfjsDisplayDOMUtils.CustomStyle;
+exports.createPromiseCapability = pdfjsSharedUtil.createPromiseCapability;
+exports.PasswordResponses = pdfjsSharedUtil.PasswordResponses;
+exports.InvalidPDFException = pdfjsSharedUtil.InvalidPDFException;
+exports.MissingPDFException = pdfjsSharedUtil.MissingPDFException;
+exports.SVGGraphics = pdfjsDisplaySVG.SVGGraphics;
+exports.UnexpectedResponseException = pdfjsSharedUtil.UnexpectedResponseException;
+exports.OPS = pdfjsSharedUtil.OPS;
+exports.UNSUPPORTED_FEATURES = pdfjsSharedUtil.UNSUPPORTED_FEATURES;
+exports.isValidUrl = pdfjsDisplayDOMUtils.isValidUrl;
+exports.createValidAbsoluteUrl = pdfjsSharedUtil.createValidAbsoluteUrl;
+exports.createObjectURL = pdfjsSharedUtil.createObjectURL;
+exports.removeNullCharacters = pdfjsSharedUtil.removeNullCharacters;
+exports.shadow = pdfjsSharedUtil.shadow;
+exports.createBlob = pdfjsSharedUtil.createBlob;
+exports.getFilenameFromUrl = pdfjsDisplayDOMUtils.getFilenameFromUrl;
+exports.addLinkAttributes = pdfjsDisplayDOMUtils.addLinkAttributes;
+
 /***/ })
 /******/ ]);
 });/* Copyright 2012 Mozilla Foundation
@@ -11569,9 +11569,9 @@ var PDFBug = (function PDFBugClosure() {
 /******/ 	function __webpack_require__(moduleId) {
 /******/
 /******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
+/******/ 		if(installedModules[moduleId])
 /******/ 			return installedModules[moduleId].exports;
-/******/ 		}
+/******/
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = installedModules[moduleId] = {
 /******/ 			i: moduleId,
@@ -11671,7 +11671,6 @@ function getOutputScale(ctx) {
 function scrollIntoView(element, spot, skipOverflowHiddenElements) {
  var parent = element.offsetParent;
  if (!parent) {
-  console.error('offsetParent is not set -- cannot scroll');
   return;
  }
  var checkOverflow = skipOverflowHiddenElements || false;
@@ -11871,7 +11870,7 @@ function noContextMenuHandler(e) {
  e.preventDefault();
 }
 function getPDFFileNameFromURL(url, defaultFilename) {
- if (typeof defaultFilename === 'undefined' || defaultFilename == "") {
+ if (typeof defaultFilename === 'undefined') {
   defaultFilename = 'document.pdf';
  }
  var reURI = /^(?:(?:[^:]+:)?\/\/[^\/]+)?([^?#]*)(\?[^#]*)?(#.*)?$/;
@@ -12436,12 +12435,10 @@ var PDFLinkService = function PDFLinkServiceClosure() {
     } else if ((destRef | 0) === destRef) {
      pageNumber = destRef + 1;
     } else {
-     console.error('PDFLinkService_navigateTo: "' + destRef + '" is not a valid destination reference.');
      return;
     }
     if (pageNumber) {
      if (pageNumber < 1 || pageNumber > self.pagesCount) {
-      console.error('PDFLinkService_navigateTo: "' + pageNumber + '" is a non-existent page number.');
       return;
      }
      self.pdfViewer.scrollPageIntoView({
@@ -12524,9 +12521,7 @@ var PDFLinkService = function PDFLinkServiceClosure() {
         zoomArgs.length > 1 ? zoomArgs[1] | 0 : null
        ];
       } else if (zoomArg === 'FitR') {
-       if (zoomArgs.length !== 5) {
-        console.error('PDFLinkService_setHash: ' + 'Not enough parameters for \'FitR\'.');
-       } else {
+       if (zoomArgs.length === 5) {
         dest = [
          null,
          { name: zoomArg },
@@ -12536,8 +12531,6 @@ var PDFLinkService = function PDFLinkServiceClosure() {
          zoomArgs[4] | 0
         ];
        }
-      } else {
-       console.error('PDFLinkService_setHash: \'' + zoomArg + '\' is not a valid zoom value.');
       }
      }
     }
@@ -12576,7 +12569,6 @@ var PDFLinkService = function PDFLinkServiceClosure() {
      this.navigateTo(dest);
      return;
     }
-    console.error('PDFLinkService_setHash: \'' + unescape(hash) + '\' is not a valid destination.');
    }
   },
   executeNamedAction: function PDFLinkService_executeNamedAction(action) {
@@ -13227,7 +13219,7 @@ var PDFViewerApplication = {
    downloadManager.downloadUrl(url, filename);
   }
   var url = this.baseUrl;
-  var filename = getPDFFileNameFromURL(this.url, this.documentInfo.Title);
+  var filename = getPDFFileNameFromURL(this.url);
   var downloadManager = this.downloadManager;
   downloadManager.onerror = function (err) {
    PDFViewerApplication.error('PDF failed to download.');
@@ -13379,7 +13371,6 @@ var PDFViewerApplication = {
      self.pdfViewer.focus();
     }
    }, function rejected(reason) {
-    console.error(reason);
     self.setInitialView(null, { scale: scale });
    });
    pagesPromise.then(function resolved() {
@@ -13401,7 +13392,6 @@ var PDFViewerApplication = {
    }
    var i = 0, numLabels = labels.length;
    if (numLabels !== self.pagesCount) {
-    console.error('The number of Page Labels does not match ' + 'the number of pages in the document.');
     return;
    }
    while (i < numLabels && labels[i] === (i + 1).toString()) {
@@ -13827,7 +13817,6 @@ function webViewerPageMode(e) {
   view = SidebarView.NONE;
   break;
  default:
-  console.error('Invalid "pagemode" hash parameter: ' + mode);
   return;
  }
  PDFViewerApplication.pdfSidebar.switchView(view, true);
@@ -14609,9 +14598,6 @@ var PDFFindController = function PDFFindControllerClosure() {
    }
   },
   nextPageMatch: function PDFFindController_nextPageMatch() {
-   if (this.resumePageIdx !== null) {
-    console.error('There can only be one pending page.');
-   }
    do {
     var pageIdx = this.offset.pageIdx;
     var matches = this.pageMatches[pageIdx];
@@ -14969,7 +14955,6 @@ window.print = function print() {
   dispatchEvent('beforeprint');
  } finally {
   if (!activeService) {
-   console.error('Expected print service to be initialized.');
    if (OverlayManager.active === 'printServiceOverlay') {
     OverlayManager.close('printServiceOverlay');
    }
@@ -16522,7 +16507,6 @@ var PDFPageView = function PDFPageViewClosure() {
      transY = 0;
      break;
     default:
-     console.error('Bad rotation value.');
      break;
     }
     CustomStyle.setProp('transform', textLayerDiv, 'rotate(' + textAbsRotation + 'deg) ' + 'scale(' + scale + ', ' + scale + ') ' + 'translate(' + transX + ', ' + transY + ')');
@@ -16543,7 +16527,6 @@ var PDFPageView = function PDFPageViewClosure() {
   },
   draw: function PDFPageView_draw() {
    if (this.renderingState !== RenderingStates.INITIAL) {
-    console.error('Must be in new state before drawing');
     this.reset();
    }
    this.renderingState = RenderingStates.RUNNING;
@@ -17221,7 +17204,6 @@ var PDFSidebar = function PDFSidebarClosure() {
     this.attachmentsView.classList.remove('hidden');
     break;
    default:
-    console.error('PDFSidebar_switchView: "' + view + '" is an unsupported value.');
     return;
    }
    this.active = view | 0;
@@ -17575,7 +17557,6 @@ var PDFThumbnailView = function PDFThumbnailViewClosure() {
   },
   draw: function PDFThumbnailView_draw() {
    if (this.renderingState !== RenderingStates.INITIAL) {
-    console.error('Must be in new state before drawing');
     return Promise.resolve(undefined);
    }
    this.renderingState = RenderingStates.RUNNING;
@@ -17801,7 +17782,6 @@ var PDFThumbnailViewer = function PDFThumbnailViewerClosure() {
     this._pageLabels = null;
    } else if (!(labels instanceof Array && this.pdfDocument.numPages === labels.length)) {
     this._pageLabels = null;
-    console.error('PDFThumbnailViewer_setPageLabels: Invalid page labels.');
    } else {
     this._pageLabels = labels;
    }
@@ -17969,7 +17949,6 @@ var PDFViewer = function pdfViewer() {
     return;
    }
    if (!(0 < val && val <= this.pagesCount)) {
-    console.error('PDFViewer_setCurrentPageNumber: "' + val + '" is out of bounds.');
     return;
    }
    var arg = {
@@ -18146,7 +18125,6 @@ var PDFViewer = function pdfViewer() {
     this._pageLabels = null;
    } else if (!(labels instanceof Array && this.pdfDocument.numPages === labels.length)) {
     this._pageLabels = null;
-    console.error('PDFViewer_setPageLabels: Invalid page labels.');
    } else {
     this._pageLabels = labels;
    }
@@ -18254,7 +18232,6 @@ var PDFViewer = function pdfViewer() {
      scale = Math.min(MAX_AUTO_SCALE, horizontalScale);
      break;
     default:
-     console.error('PDFViewer_setScale: "' + value + '" is an unknown zoom value.');
      return;
     }
     this._setScaleUpdatePages(scale, value, noScroll, true);
@@ -18291,7 +18268,6 @@ var PDFViewer = function pdfViewer() {
    }
    var pageView = this._pages[pageNumber - 1];
    if (!pageView) {
-    console.error('PDFViewer_scrollPageIntoView: ' + 'Invalid "pageNumber" parameter.');
     return;
    }
    var x = 0, y = 0;
@@ -18340,7 +18316,6 @@ var PDFViewer = function pdfViewer() {
     scale = Math.min(Math.abs(widthScale), Math.abs(heightScale));
     break;
    default:
-    console.error('PDFViewer_scrollPageIntoView: \'' + dest[1].name + '\' is not a valid destination type.');
     return;
    }
    if (scale && scale !== this._currentScale) {
@@ -18819,9 +18794,6 @@ var TextLayerBuilder = function TextLayerBuilderClosure() {
     while (i !== end && matchIdx >= iIndex + bidiTexts[i].str.length) {
      iIndex += bidiTexts[i].str.length;
      i++;
-    }
-    if (i === bidiTexts.length) {
-     console.error('Could not find a matching mapping');
     }
     var match = {
      begin: {
